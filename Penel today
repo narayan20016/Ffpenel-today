@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FF Max Custom Room Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Free Fire Max Custom Room Panel</h1>
+
+  <div class="feature">
+    <label><input type="checkbox" id="headshotLock"> 100% Headshot Lock</label>
+  </div>
+  
+  <div class="feature">
+    <label><input type="checkbox" id="noRecoil"> No Recoil</label>
+  </div>
+  
+  <div class="feature">
+    <label><input type="checkbox" id="obUpdate"> Latest OB Update Features</label>
+  </div>
+
+  <button onclick="activateFeatures()">Activate Features</button>
+
+  <p id="status"></p>
+
+  <script>
+    function activateFeatures() {
+      let statusMessage = "Activated Features:\n";
+
+      if (document.getElementById('headshotLock').checked) {
+        statusMessage += "✔ 100% Headshot Lock\n";
+      }
+
+      if (document.getElementById('noRecoil').checked) {
+        statusMessage += "✔ No Recoil\n";
+      }
+
+      if (document.getElementById('obUpdate').checked) {
+        statusMessage += "✔ Latest OB Update Features\n";
+      }
+
+      document.getElementById('status').innerText = statusMessage;
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #1e1e1e;
+      color: white;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .feature {
+      margin: 20px 0;
+      font-size: 18px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #status {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</body>
+</html>
